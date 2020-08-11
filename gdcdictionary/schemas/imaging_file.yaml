@@ -1,0 +1,169 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "imaging_file"
+title: Imaging File
+type: object
+namespace: https://chicagoland.pandemicresponsecommons.org
+category: data_file
+program: '*'
+project: '*'
+description: >
+  Data file containing raw imaging data
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - exclusive: false
+    required: true
+    subgroup:
+      - name: core_metadata_collections
+        backref: imaging_files
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: many_to_one
+        required: false
+      - name: subjects
+        backref: imaging_files
+        label: data_for
+        target_type: subject
+        multiplicity: many_to_one
+        required: false
+      - name: follow_ups
+        backref: imaging_files
+        label: data_for
+        target_type: follow_up
+        multiplicity: many_to_one
+        required: false
+
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - file_name
+  - file_size
+  - data_format
+  - md5sum
+  - data_category
+  - data_type
+
+properties:
+  $ref: "_definitions.yaml#/data_file_properties"
+
+  type:
+    enum: [ "imaging_file" ]
+
+  data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
+    type: string
+
+  data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
+    type: string
+
+  data_format:
+    term:
+      $ref: "_terms.yaml#/data_format"
+    type: string
+
+  experimental_strategy:
+    term:
+      $ref: "_terms.yaml#/experimental_strategy"
+    type: string
+
+  image_quality:
+    description: >
+      Good, poor, or average image quality
+    enum:
+      - "Good image quality"
+      - "Average image quality"
+      - "Poor image quality"
+      - "Not Reported"
+
+  series_instance_uid:
+    description: >
+      Formal identifier for this image or other content.
+    type: string
+
+  series_instance_number:
+    description: >
+      order number for this image or other content.
+    type: integer
+
+  uid:
+    description: >
+      Formal DICOM identifier for the study.
+    type: string
+
+  series_uid:
+    description: >
+      Formal identifier for this series.
+    type: string
+
+  image_body_site:
+    description: >
+      Location of image in both lungs, left lung or right lung.
+    enum:
+      - "Both lungs"
+      - "Left lung"
+      - "Right lung"
+
+  folder:
+    description: >
+      Name of folder containing the scan
+    type: string
+
+  image_url:
+    description: >
+      URL of the paper or website where the image came from
+    type: string
+
+  license:
+    description: >
+      License of the image such as CC BY-NC-SA. Blank if unknown
+    type: string
+
+  clinical_notes:
+    description: >
+      Clinical notes about the image and/or the patient
+    type: string
+
+  other_notes:
+    description: >
+      e.g. credit
+    type: string
+
+  offset_imaging:
+    description: >
+      number of days since the start of symptoms or hospitalization for each image, this is very important to have when there are multiple images for the same patient to track progression while being imaged. If a report says "after a few days" let's assume 5 days.
+    type: integer
+
+  image_location:
+    description: >
+      Hospital name, city, state, country
+    type: string
+
+  image_date:
+    description: >
+      Image date
+    type: string
+
+  subjects:
+    $ref: "_definitions.yaml#/to_one"
+  follow_ups:
+    $ref: "_definitions.yaml#/to_one"
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_one"
