@@ -53,7 +53,8 @@ uniqueKeys:
 
 # Case properties
 properties:
-  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  $ref: "_definitions.yaml#/data_file_properties"
 
   type:
     enum: [ "clinical_trial" ]
