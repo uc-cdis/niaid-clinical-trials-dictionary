@@ -138,11 +138,6 @@ properties:
     default: false
     type: boolean
 
-  url:
-    description: |
-      The url for the data set's source.
-    type: string
-
   data_description:
     description: |
       The description of the type of data found in the data set.
