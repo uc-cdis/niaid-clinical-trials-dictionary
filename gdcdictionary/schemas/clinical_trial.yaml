@@ -40,6 +40,10 @@ links:
 required:
   - submitter_id
   - type
+  - file_size
+  - data_format
+  - data_category
+  - data_type
 
 uniqueKeys:
   - [id]
