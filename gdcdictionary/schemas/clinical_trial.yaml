@@ -106,7 +106,7 @@ properties:
 
   official_title:
     description: >
-      Official name for this study (Brief Title)
+      Official name for this study (Official Title)
     type: string
 
   description:
@@ -136,7 +136,32 @@ properties:
       - "phase-2-phase-3"
       - "phase-3"
       - "phase-4"
+  
+  study_design_allocation:
+    description: >
+      Study Design: Allocation
+    type: string
 
+  study_design_intervention:
+    description: >
+      Study Design: Intervention Model
+    type: string
+
+  study_design_masking:
+    description: >
+      Study Design: Masking
+    type: string
+
+  study_design_primary_purpose:
+    description: >
+      Study Design: Primary Purpose
+    type: string
+
+  condition:
+    description: >
+      Study Design: Primary Purpose
+    type: string
+    
   category:
     description: >
       Codes that describe the type of research study. (Intervention)
