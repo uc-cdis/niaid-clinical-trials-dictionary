@@ -108,7 +108,7 @@ properties:
 
   category:
     description: >
-      Codes that describe the type of research study. E.g. Study phase, Interventional/Observational, blinding type, etc. (Intervention)
+      Codes that describe the type of research study. (Intervention)
     type: string
 
   arm_name:
