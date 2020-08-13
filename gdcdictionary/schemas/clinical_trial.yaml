@@ -212,13 +212,6 @@ properties:
       - "True"
       - "False"
 
-  fda_regulated_drug_product:
-    description: >
-      Studies a U.S. FDA-regulated Drug Product
-    enum:
-      - "True"
-      - "False"	
-
   fda_regulated_device_product:
     description: >
       Studies a U.S. FDA-regulated Device Product
