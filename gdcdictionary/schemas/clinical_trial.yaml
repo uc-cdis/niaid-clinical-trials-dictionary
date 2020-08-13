@@ -217,7 +217,7 @@ properties:
       Studies a U.S. FDA-regulated Device Product
     enum:
       - "True"
-      - "False"	
+      - "False"
 
   fda_regulated_drug_product:
     description: >
