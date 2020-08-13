@@ -4,7 +4,7 @@ id: "clinical_trial"
 title: Clinical Trial
 type: object
 namespace: https://niaid-clinical-trials-dictionary.org
-category: clinical
+category: data_file
 program: '*'
 project: '*'
 description: >
@@ -24,6 +24,12 @@ links:
   - exclusive: false
     required: true
     subgroup:
+    - name: core_metadata_collections
+      backref: data_files
+      label: data_from
+      target_type: core_metadata_collection
+      multiplicity: many_to_one
+      required: false
     - name: projects
       backref: clinical_trials
       label: data_from
@@ -270,3 +276,5 @@ properties:
     
   projects:
     $ref: "_definitions.yaml#/to_one_project"
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_one"
