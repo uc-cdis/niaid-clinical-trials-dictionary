@@ -231,7 +231,7 @@ properties:
       Product Manufactured in and Exported from the US
     enum:
       - "True"
-      - "False"	
+      - "False"
 
   ipd_sharing_statement:
     description: >
