@@ -30,12 +30,6 @@ links:
       target_type: core_metadata_collection
       multiplicity: many_to_one
       required: false
-    - name: projects
-      backref: clinical_trials
-      label: data_from
-      target_type: project
-      multiplicity: many_to_one
-      required: false
 
 required:
   - type
