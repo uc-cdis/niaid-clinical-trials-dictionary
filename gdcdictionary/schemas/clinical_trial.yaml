@@ -124,7 +124,7 @@ properties:
     description: >
       Study Phase
     enum:
-      - "n-a"
+      - "NA"
       - "early-phase-1"
       - "phase-1"
       - "phase-1-phase-2"
@@ -135,27 +135,31 @@ properties:
   
   study_design_allocation:
     description: >
-      Study Design: Allocation
-    type: string
+      The type of allocation study design.
+    enum:
+      - "Randomized"
 
   study_design_intervention:
     description: >
-      Study Design: Intervention Model
-    type: string
+      the type of intervention model study design.
+    enum:
+      - "Parallel Assignment"
 
   study_design_masking:
     description: >
-      Study Design: Masking
-    type: string
+      Type of masking study design
+    enum:
+      - "Double (Participant, Investigator)"
 
   study_design_primary_purpose:
     description: >
-      Study Design: Primary Purpose
-    type: string
+      The primary purpose of the study. 
+    enum:
+      - "Treatment"
 
   condition:
     description: >
-      Study Design: Primary Purpose
+      The name(s) of the disease(s) or condition(s) studied in the clinical study, or the focus of the clinical study.
     enum:
       - "COVID-19"
       - "Other"
