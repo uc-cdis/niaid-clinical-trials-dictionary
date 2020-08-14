@@ -122,7 +122,9 @@ properties:
   category:
     description: >
       Classifications for the study (Study Type)
-    type: string
+    enum:
+      - "Investigational"
+      - "Observational"
 
   phase:
     description: >
@@ -160,22 +162,38 @@ properties:
   condition:
     description: >
       Study Design: Primary Purpose
-    type: string
+    enum:
+      - "COVID-19"
+      - "Other"
     
-  category:
+  focus:
     description: >
-      Codes that describe the type of research study. (Intervention)
-    type: string
+      Codes for medications, devices and other interventions. (Intervention)
+    enum:
+      - "Drug"
+      - "Other"
 
+  focus_spec:
+    description: >
+      Specify the codes for medications, devices and other interventions.
+    enum:
+      - "Placebo"
+      - "Remdesivir"
+    
   arm_name:
     description: >
       Label for study arm
-    type: string
+    enum:
+      - "Placebo"
+      - "Remdesivir"
 
   arm_type:
     description: >
       Categorization of study arm
-    type: string
+    enum:
+      - "Active Comparator"
+      - "Placebo Comparator"
+      - "Experimental"
 
   arm_description:
     description: >
