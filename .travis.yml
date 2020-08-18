@@ -6,3 +6,15 @@ before_script:
 - git clone https://github.com/uc-cdis/dictionaryutils; cd dictionaryutils
 script:
 - "./run_tests.sh"
+deploy:
+  provider: s3
+  access_key_id: AKIAZRNPHKJIHWNZAWXF
+  secret_access_key:
+    secure: VuU9+6YAks9ZuTqPl0dmySbMZjfeK08pW6daX3dv5M1TLOH70xxqqh9n/kHDHPB24Awd6/A4pAQmo91Q7QXxKygpRE70hUH3iKQYxIEMpXbpd2xKYJjnGb09ZC5eDz5VLddfY1gX3O+bdGMysVmoGkd0rXs0roUxa749lOal0SMeiAvDNXh9j81XoOVTQevqIHgTqBRG4r5IWFuFEF+lStX6/UTWyzR8OB7y7IW+QMDJRnS/jVhDbeD2z3L6RcnVKPqFrchcgLd2u+Oz49BokRv+aajGYpxLoSEb49FxULsDOx5gsAzQbp7O84Q12gdjK/O9DXYvxRERGvVaioTGOzFb5Rro+gyPhS5SveUrhfbEas63DcdS2MihtF/+C3ZZJogZ5hfJ+18jNKfDBnqUgyoVvPnKceE0ujzo2yWsbLrOUfFxY+1hh9HeLdr9op8YxA+o3UCUhTO6FPMBRGIhpU0AiY9JuozVythcFR9LwdKUe0yLLdYv5gzQ6c7jASSVc/MVlYbH/yX1u/LAQINMsLnAVXGvR0y5nYGSoosKZ0Fe3gRIXq6+MdB5bEMaTM8cH8Ms1QrSmUPwrzSRERombSolQYcYAjgK+5Du9SmgXs0GBojb2SFt4z3AQi87WJ98ZVCksLc1dtcxQjlLCpvC4T6nkchhqBaT7pqhx0gg6sk=
+  bucket: dictionary-artifacts
+  local-dir: artifacts
+  upload-dir: niaid-clinical-trials-dictionary/$TRAVIS_BRANCH
+  skip_cleanup: true
+  on:
+    repo: uc-cdis/niaid-clinical-trials-dictionary
+    all_branches: true
