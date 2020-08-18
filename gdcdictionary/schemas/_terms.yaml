@@ -1484,6 +1484,16 @@ sequencing_center: # TOREVIEW
   description: >
     Name of the center that provided the sequence files.
 
+sex:
+  description: >
+    The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.
+  termDef:
+    term: Self Reported Person Sex Text Type
+    source: NCI Thesaurus
+    cde_id: 2200602
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2200602&version=3.0"
+
 shortest_dimension:
   description: >
     Numeric value that represents the shortest dimension of the sample, measured in millimeters.
