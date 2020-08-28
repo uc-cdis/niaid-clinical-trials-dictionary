@@ -403,7 +403,7 @@ properties:
       The date on which the responsible party last verified the clinical study information in the entire ClinicalTrials.gov record for the clinical study, even if no additional or updated information is being submitted.
     type: string
 
-#Props needed for Pidgen
+#Props needed for Pidgin
   contributor:
     description: >
       An entity responsible for making contributions to the resource. Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.
