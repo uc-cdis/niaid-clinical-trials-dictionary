@@ -55,7 +55,7 @@ properties:
       $ref: "_terms.yaml#/data_format"
     type: string
 
- submitted_date:
+  submitted_date:
     description: >
       The date on which the study sponsor or investigator first submitted a study record to ClinicalTrials.gov.
     type: string
