@@ -103,6 +103,7 @@ properties:
   doc_url:
    description: >
     The originating URL of the document.
+   type: string
 
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
