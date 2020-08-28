@@ -1,6 +1,6 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "open_acccess_doc"
+id: "open_access_doc"
 title: Open Access Doc
 type: object
 namespace: https://niaid-clinical-trials-dictionary.org

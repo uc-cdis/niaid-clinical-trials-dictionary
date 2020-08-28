@@ -68,8 +68,5 @@ properties:
       $ref: "_terms.yaml#/data_format"
     type: string
 
-
-  projects:
-    $ref: "_definitions.yaml#/to_one_project"
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"
