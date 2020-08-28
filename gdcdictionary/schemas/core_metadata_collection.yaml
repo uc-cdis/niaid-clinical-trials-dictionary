@@ -75,7 +75,8 @@ properties:
       A short title of the clinical study written in language intended for the lay public. The title should include, where possible, information on the participants, condition being evaluated, and intervention(s) studied.
     type: string
 
-  official_title:
+#Prop name from clinicaltrials.gov is official_title
+  title:
     description: >
       The title of the clinical study, corresponding to the title of the protocol.
     type: string
@@ -85,8 +86,8 @@ properties:
       A short description of the clinical study, including a brief statement of the clinical study's hypothesis, written in language intended for the lay public.
     type: string
 
-# Can be mapped to HL7 FHIR ResearchStudy.description
-  detailed_description:
+# Can be mapped to HL7 FHIR ResearchStudy.description. Prop name from clinicaltrials.gov is detailed_description.
+  description:
     description: >
       Extended description of the protocol, including more technical information, if desired. Do not include the entire protocol; do not duplicate information recorded in other data elements, such as Eligibility Criteria or outcome measures.
     type: string
@@ -375,8 +376,8 @@ properties:
     - "Principle Investigator"
     - "Sponsor-Investigator"
 
-# HL7 FHIR definition
-  sponsor:
+# Can be mapped to HL7 FHIR ResearchStudy.sponsor
+  creator:
     description: >
       An organization that initiates the investigation and is legally responsible for the study.
     type: string
@@ -403,21 +404,6 @@ properties:
     type: string
 
 #Props needed for Pidgin
-  title:
-    description: >
-      A name given to the resource. Typically, a Title will be a name by which the resource is formally known.
-    type: string
-
-  description:
-    description: >
-      An account of the resource. Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.
-    type: string
-
-  creator:
-    description: >
-      An entity primarily responsible for making the resource. Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.
-    type: string
-
   contributor:
     description: >
       An entity responsible for making contributions to the resource. Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.
