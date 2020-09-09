@@ -20,21 +20,12 @@ systemProperties:
   - state
 
 links:
-  - exclusive: false
+  - name: core_metadata_collections
+    backref: open_access_docs
+    label: data_from
+    target_type: core_metadata_collection
+    multiplicity: many_to_one
     required: true
-    subgroup:
-      - name: projects
-        backref: open_access_docs
-        label: data_from
-        target_type: project
-        multiplicity: many_to_one
-        required: true
-      - name: core_metadata_collections
-        backref: open_access_docs
-        label: data_from
-        target_type: core_metadata_collection
-        multiplicity: many_to_one
-        required: false
 
 required:
   - type
