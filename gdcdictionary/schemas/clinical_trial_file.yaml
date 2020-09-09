@@ -21,15 +21,12 @@ systemProperties:
   - state
 
 links:
-  - exclusive: false
+  - name: core_metadata_collections
+    backref: clinical_trial_files
+    label: data_from
+    target_type: core_metadata_collection
+    multiplicity: many_to_one
     required: true
-    subgroup:
-    - name: core_metadata_collections
-      backref: clinical_trial_files
-      label: data_from
-      target_type: core_metadata_collection
-      multiplicity: many_to_one
-      required: false
 
 required:
   - type
