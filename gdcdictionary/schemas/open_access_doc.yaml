@@ -97,6 +97,4 @@ properties:
    type: string
 
   core_metadata_collections:
-    $ref: "_definitions.yaml#/to_many"
-  projects:
-    $ref: "_definitions.yaml#/to_many_project"
+    $ref: "_definitions.yaml#/to_one"
