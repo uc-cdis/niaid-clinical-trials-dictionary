@@ -345,11 +345,18 @@ properties:
 
   responsible_party:
     description: >
-      An indication of whether the responsible party is the sponsor, the sponsor-investigator, or a principal investigator designated by the sponsor to be the responsible party.
+     An indication of whether the responsible party is the sponsor, the sponsor-investigator, or a principal investigator designated by the sponsor to be the responsible party.
     enum:
     - "Sponsor"
     - "Principle Investigator"
     - "Sponsor-Investigator"
+
+  data_available:
+    description: >
+     A description of the type of controlled-acccess data that can be requested.
+    enum:
+    - "Patient-Level Data"
+    - "Other"
 
 # Can be mapped to HL7 FHIR ResearchStudy.sponsor
 # Required property for Gen3 Pidgin
