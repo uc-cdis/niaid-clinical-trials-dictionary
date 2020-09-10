@@ -96,7 +96,7 @@ properties:
     description: >
       The nature of the investigation or investigational use for which clinical study information is being submitted.
     enum:
-      - "Investigational"
+      - "Interventional"
       - "Observational"
       - "Expanded Access"
 
@@ -265,31 +265,6 @@ properties:
       A limited list of criteria for selection of participants in the clinical study, provided in terms of inclusion and exclusion criteria and suitable for assisting potential participants in identifying clinical studies of interest. Use a bulleted list for each criterion below the headers "Inclusion Criteria" and "Exclusion Criteria".
     type: string
 
-  sex:
-    term:
-      $ref: "_terms.yaml#sex"
-    enum:
-      - "Male"
-      - "Female"
-      - "Not Reported"
-    termDef:
-      - term: Sex
-        source: NCI Thesaurus
-        term_id: C28421
-        term_version: Version:20.07d (Release date:2020-07-27)
-    enumDef:
-      - enumeration: Female
-        source: NCI Thesaurus
-        term_id: C16576
-        term_version: Version:20.07d (Release date:2020-07-27)
-      - enumeration: Male
-        source: NCI Thesaurus
-        term_id: C20197
-        term_version: Version:20.07d (Release date:2020-07-27)
-      - enumeration: Not Reported
-        term_id: C43234
-        term_version: Version:20.07d (Release date:2020-07-27)
-
 # HL7 FHIR definition
   enrollment:
     description: >
@@ -370,13 +345,21 @@ properties:
 
   responsible_party:
     description: >
-      An indication of whether the responsible party is the sponsor, the sponsor-investigator, or a principal investigator designated by the sponsor to be the responsible party.
+     An indication of whether the responsible party is the sponsor, the sponsor-investigator, or a principal investigator designated by the sponsor to be the responsible party.
     enum:
     - "Sponsor"
     - "Principle Investigator"
     - "Sponsor-Investigator"
 
+  data_available:
+    description: >
+     A description of the type of controlled-acccess data that can be requested.
+    enum:
+    - "Patient-Level Data"
+    - "Other"
+
 # Can be mapped to HL7 FHIR ResearchStudy.sponsor
+# Required property for Gen3 Pidgin
   creator:
     description: >
       An organization that initiates the investigation and is legally responsible for the study.
@@ -401,6 +384,11 @@ properties:
   verification_date:
     description: >
       The date on which the responsible party last verified the clinical study information in the entire ClinicalTrials.gov record for the clinical study, even if no additional or updated information is being submitted.
+    type: string
+
+  clinical_trial_website:
+    description: >
+      Any originating or affiliated website for the respective clinical trial.
     type: string
 
 #Props needed for Pidgin
