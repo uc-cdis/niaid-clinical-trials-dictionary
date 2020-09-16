@@ -63,7 +63,26 @@ properties:
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
-    type: string
+    enum:
+      - FASTA
+      - FAI
+      - ALT
+      - BWT
+      - PAC
+      - ANN
+      - AMB
+      - SA
+      - TAR
+      - VCF
+      - BCF
+      - TBI
+      - GDS
+      - TXT
+      - RDATA
+      - AVRO
+      - CSV
+      - TSV
+      - PDF
 
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"

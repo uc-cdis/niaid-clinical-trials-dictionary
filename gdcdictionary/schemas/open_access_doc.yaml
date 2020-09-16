@@ -32,8 +32,6 @@ required:
   - submitter_id
   - file_name
   - file_size
-  - data_category
-  - data_type
   - data_format
   - doc_url
 
@@ -50,22 +48,12 @@ properties:
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
-    enum:
-      - Sequencing Reference
-      - Variant Calling Reference
-      - Familial Reference
-      - Clinical Data
-      - Other
+    type: string
 
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum:
-      - Sequencing Reference
-      - Variant Call
-      - Kinship Matrix
-      - Unharmonized Clinical Data
-      - Other
+    type: string
 
   data_format:
     term:
