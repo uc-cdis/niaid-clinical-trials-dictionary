@@ -32,6 +32,7 @@ required:
   - submitter_id
   - file_name
   - file_size
+  - md5sum
   - data_format
   - doc_url
 
