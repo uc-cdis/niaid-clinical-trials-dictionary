@@ -360,7 +360,7 @@ properties:
 
   data_availability_date:
     description: >
-      The date of availability for the controlled access patient-level data. This date indicates when users may request this data.
+      The date of availability for the controlled access patient-level data. This date indicates when users may request access to this data.
     type: string
 # Can be mapped to HL7 FHIR ResearchStudy.sponsor
 # Required property for Gen3 Pidgin
