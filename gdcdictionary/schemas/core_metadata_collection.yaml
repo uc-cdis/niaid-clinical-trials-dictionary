@@ -363,6 +363,11 @@ properties:
       The date of availability for the controlled access patient-level data. This date indicates when users may request access to this data.
     type: string
 
+  most_recent_update:
+    description: >
+      The date of the most recent update to the clinical trial dataset.
+    type: string
+
   data_available_for_request:
     description: >
       Whether users may request access to this data.
