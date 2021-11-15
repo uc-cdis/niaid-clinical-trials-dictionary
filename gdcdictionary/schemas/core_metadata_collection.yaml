@@ -365,7 +365,7 @@ properties:
 
   most_recent_update:
     description: >
-      The date of the most recent update to the study data.
+      The date of the most recent update to the clinical trial dataset.
     type: string
 
   data_available_for_request:
