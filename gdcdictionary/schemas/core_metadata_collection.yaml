@@ -96,7 +96,7 @@ properties:
     description: >
       Extended description of the protocol, including more technical information, if desired. Do not include the entire protocol; do not duplicate information recorded in other data elements, such as Eligibility Criteria or outcome measures.
     type: string
-
+   
   category:
     description: >
       The nature of the investigation or investigational use for which clinical study information is being submitted.
@@ -446,6 +446,16 @@ properties:
     description: >
       The topic of the resource. Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.
     type: string
+
+    study_registration:
+      description: >
+        A string which will identify the repository where data for the study is stored.
+      type: string
+
+    study_registration_id:
+      description: >
+        A string which will identify the unique ID for the study within the repository where data for the study is stored.
+      type: string  
 
   projects:
     $ref: "_definitions.yaml#/to_one_project"
