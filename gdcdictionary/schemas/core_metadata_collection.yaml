@@ -447,15 +447,20 @@ properties:
       The topic of the resource. Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.
     type: string
 
-    study_registration:
-      description: >
-        A string which will identify the repository where data for the study is stored.
-      type: string
+  study_registration:
+    description: >
+      A string which will identify the repository where data for the study is stored.
+    type: string
 
-    study_registration_id:
-      description: >
-        A string which will identify the unique ID for the study within the repository where data for the study is stored.
-      type: string  
+  study_registration_id:
+    description: >
+      A string which will identify the unique ID for the study within the repository where data for the study is stored.
+    type: string  
+      
+  required_idp:
+    description: >
+      The identity provider for the data set. Only users who have logged in via this identity provider can request access to this data.
+    type: string
 
   projects:
     $ref: "_definitions.yaml#/to_one_project"
