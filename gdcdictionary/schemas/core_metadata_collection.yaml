@@ -462,5 +462,10 @@ properties:
       The identity provider for the data set. Only users who have logged in via this identity provider can request access to this data.
     type: string
 
+  external_url:
+    description: >
+      The external database url for a study.
+    type: string
+
   projects:
     $ref: "_definitions.yaml#/to_one_project"
