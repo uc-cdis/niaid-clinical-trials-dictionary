@@ -36,6 +36,7 @@ required:
   - submitter_id
   - type
   - projects
+  - most_recent_update_datetime
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
@@ -373,6 +374,8 @@ properties:
       The date of the most recent update to the clinical trial dataset.
     type: string
 
+  # Added so we can sort the datasets by most recent update.
+  # Needed because the above field is in human-readable format (Month Day) and not sortable.
   most_recent_update_datetime:
     description: >
       Datetime format for the most recent update to the clinical trial dataset.
