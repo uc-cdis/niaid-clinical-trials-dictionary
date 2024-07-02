@@ -101,10 +101,7 @@ properties:
   category:
     description: >
       The nature of the investigation or investigational use for which clinical study information is being submitted.
-    enum:
-      - "Interventional"
-      - "Observational"
-      - "Expanded Access"
+    type: string
 
   study_phase:
     description: >
@@ -164,10 +161,7 @@ properties:
   condition:
     description: >
       The name(s) of the disease(s) or condition(s) studied in the clinical study, or the focus of the clinical study. Use, if available, appropriate descriptors from NLM's Medical Subject Headings (MeSH)-controlled vocabulary thesaurus or terms from another vocabulary, such as the Systematized Nomenclature of Medicine—Clinical Terms (SNOMED CT), that has been mapped to MeSH within the Unified Medical Language System (UMLS) Metathesaurus.
-    enum:
-      - "COVID-19"
-      - "Pneumonia"
-      - "Other"
+    type: string
 
   intervention_type:
     description: >
@@ -361,9 +355,7 @@ properties:
   data_available:
     description: >
      A description of the type of controlled-acccess data that can be requested.
-    enum:
-    - "Patient-Level Data"
-    - "Other"
+    type: string
 
   data_availability_date:
     description: >
