@@ -5,7 +5,7 @@ on: push
 jobs:
   dictionary:
     name: Build and Deploy Dictionary
-    uses: uc-cdis/.github/.github/workflows/dictionary_push.yaml@fix/pip-reinstall-gdcddictionary
+    uses: uc-cdis/.github/.github/workflows/dictionary_push.yaml@master
     with:
       DIRECTORY: "niaid-clinical-trials-dictionary"
     secrets:
